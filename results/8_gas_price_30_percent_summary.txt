@@ -1,0 +1,29 @@
+========= Summary for Scenario: 8_gas_price_30_percent =========
+Configuration File: configs/8_gas_price_30_percent.yaml
+Total Time: 5.33s
+
+--- Cost Summary ---
+Total Annual Cost: 78,649,818.61 HKD
+  - Annualized Investment Cost: 27,836.11 HKD
+  - Total Annual Operational Cost: 78,621,982.50 HKD
+
+--- Investment Decisions ---
+Converters:
+  - ICE: 15 units => Capacity: 120.00 MW
+  - Heat_Pump_B: 1 units => Capacity: 10.00 MW
+  - WARP: 12 units => Capacity: 144.00 MW
+
+Storages:
+  - Elec_Storage: 232 units => Power: 232.00 MW, Capacity: 464.00 MWh
+  - Heat_Storage: 22 units => Power: 176.00 MW, Capacity: 880.00 MWh
+  - Cooling_Storage: 16 units => Power: 128.00 MW, Capacity: 640.00 MWh
+
+--- Annual Energy & Load Summary ---
+Total Gas Import: 450,247.09 MWh/year
+Total Elec Import: 109,253.58 MWh/year
+Total Elec Shed: 0.00 MWh/year
+Total Heat Shed: 0.00 MWh/year
+Total Cool Shed: 0.00 MWh/year
+
+Average Gas Price: 86.10 HKD/MWh
+Average Elec Price: 364.80 HKD/MWh

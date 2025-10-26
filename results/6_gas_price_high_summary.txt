@@ -1,0 +1,27 @@
+========= Summary for Scenario: 6_gas_price_high =========
+Configuration File: configs/6_gas_price_high.yaml
+Total Time: 3.16s
+
+--- Cost Summary ---
+Total Annual Cost: 120,256,069.47 HKD
+  - Annualized Investment Cost: 39,035.90 HKD
+  - Total Annual Operational Cost: 120,217,033.57 HKD
+
+--- Investment Decisions ---
+Converters:
+  - Heat_Pump_B: 3 units => Capacity: 30.00 MW
+  - CERG_B: 2 units => Capacity: 24.00 MW
+
+Storages:
+  - Elec_Storage: 378 units => Power: 378.00 MW, Capacity: 756.00 MWh
+  - Heat_Storage: 17 units => Power: 136.00 MW, Capacity: 680.00 MWh
+  - Cooling_Storage: 16 units => Power: 128.00 MW, Capacity: 640.00 MWh
+
+--- Annual Energy & Load Summary ---
+Total Gas Import: 0.00 MWh/year
+Total Elec Import: 329,542.31 MWh/year
+Total Elec Shed: 0.00 MWh/year
+Total Heat Shed: 0.00 MWh/year
+Total Cool Shed: 0.00 MWh/year
+
+Average Elec Price: 364.80 HKD/MWh

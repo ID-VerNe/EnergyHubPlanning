@@ -1,0 +1,27 @@
+========= Summary for Scenario: 5_days_12 =========
+Configuration File: configs/5_days_12.yaml
+Total Time: 5.75s
+
+--- Cost Summary ---
+Total Annual Cost: 116,046,682.67 HKD
+  - Annualized Investment Cost: 38,034.92 HKD
+  - Total Annual Operational Cost: 116,008,647.75 HKD
+
+--- Investment Decisions ---
+Converters:
+  - Heat_Pump_B: 3 units => Capacity: 30.00 MW
+  - CERG_B: 1 units => Capacity: 12.00 MW
+
+Storages:
+  - Elec_Storage: 370 units => Power: 370.00 MW, Capacity: 740.00 MWh
+  - Heat_Storage: 17 units => Power: 136.00 MW, Capacity: 680.00 MWh
+  - Cooling_Storage: 10 units => Power: 80.00 MW, Capacity: 400.00 MWh
+
+--- Annual Energy & Load Summary ---
+Total Gas Import: 0.00 MWh/year
+Total Elec Import: 318,006.16 MWh/year
+Total Elec Shed: 0.00 MWh/year
+Total Heat Shed: 0.00 MWh/year
+Total Cool Shed: 0.00 MWh/year
+
+Average Elec Price: 364.80 HKD/MWh
