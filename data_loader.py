@@ -1,3 +1,9 @@
+# Copyright (c) 2025 VerNe.
+# All rights reserved.
+#
+# This code is for personal academic use only.
+# Unauthorized use, copying, or distribution of this code is strictly prohibited.
+
 """
 Data loading and processing for the MES optimization model.
 
@@ -41,10 +47,8 @@ def load_and_prepare_data():
     if num_typical_days > num_total_days:
         raise ValueError(f"NUM_DAYS ({num_typical_days}) cannot be greater than the total number of days in the dataset ({num_total_days}).")
 
-    # Calculate the indices of the days to select
-    day_indices = np.linspace(0, num_total_days - 1, num_typical_days, dtype=int)
-    
     # Get the corresponding hourly indices for the selected days
+    day_indices = np.linspace(0, num_total_days - 1, num_typical_days, dtype=int)
     hour_indices = []
     for day_idx in day_indices:
         hour_indices.extend(range(day_idx * 24, (day_idx + 1) * 24))

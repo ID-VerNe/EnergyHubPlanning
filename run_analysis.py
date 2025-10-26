@@ -1,3 +1,9 @@
+# Copyright (c) 2025 VerNe.
+# All rights reserved.
+#
+# This code is for personal academic use only.
+# Unauthorized use, copying, or distribution of this code is strictly prohibited.
+
 """
 Main script to run the MES (Multi-Energy System) optimization analysis.
 This script replicates the logic from the reference notebook using the pymeshub structure,
@@ -85,11 +91,11 @@ def run_optimization(config_path: str):
                 get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.endswith('_to_Elec_Storage_energy_in')])
     constraints.append(elec_gen == elec_cons + typical_data['elec_load(MW)'].values - shed_elec)
 
-    heat_gen = get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('CHP_A_heat_out_to')]) + \
+    heat_gen = get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('Gas_Boiler_heat_out_to')]) + \
+               get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('Elec_Boiler_heat_out_to')]) + \
+               get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('CHP_A_heat_out_to')]) + \
                get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('CHP_B_heat_out_to')]) + \
                get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('ICE_heat_out_to')]) + \
-               get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('Gas_Boiler_heat_out_to')]) + \
-               get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('Elec_Boiler_heat_out_to')]) + \
                get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('Heat_Pump_A_heat_out_to')]) + \
                get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('Heat_Pump_B_heat_out_to')]) + \
                get_total_flow([idx for name, idx in branch_name_to_idx.items() if name.startswith('Heat_Storage_energy_out_to')])

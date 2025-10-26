@@ -1,3 +1,9 @@
+# Copyright (c) 2025 VerNe.
+# All rights reserved.
+#
+# This code is for personal academic use only.
+# Unauthorized use, copying, or distribution of this code is strictly prohibited.
+
 """
 Dynamic configuration loader for the MES optimization model.
 

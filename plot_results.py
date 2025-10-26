@@ -1,3 +1,9 @@
+# Copyright (c) 2025 VerNe.
+# All rights reserved.
+#
+# This code is for personal academic use only.
+# Unauthorized use, copying, or distribution of this code is strictly prohibited.
+
 
 '''
 This script generates analysis plots from the batch simulation results.
@@ -85,8 +91,8 @@ def plot_gas_viability_heatmap():
         values='gas_import_1e5_mwh' # Use the scaled data for values
     )
     # Sort the axes for a correct representation
-    heatmap_data = heatmap_data.sort_index(ascending=False)
-    heatmap_data = heatmap_data.sort_index(axis=1, ascending=True)
+    heatmap_data = heatmap_data.sort_values(by='gas_invest_multiplier', ascending=False)
+    heatmap_data = heatmap_data.sort_values(by='gas_price_multiplier', axis=1, ascending=True)
 
     plt.figure(figsize=(12, 9))
     
