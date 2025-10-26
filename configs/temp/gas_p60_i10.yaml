@@ -1,0 +1,91 @@
+base_capacities:
+  CERG_A: 0.5
+  CERG_B: 12
+  CHP_A: 2
+  CHP_B: 8
+  Cooling_Storage:
+    capacity: 40
+    power: 8
+  Elec_Boiler: 2
+  Elec_Storage:
+    capacity: 2
+    power: 1
+  Gas_Boiler: 2
+  Heat_Pump_A: 2
+  Heat_Pump_B: 10
+  Heat_Storage:
+    capacity: 40
+    power: 8
+  ICE: 8
+  WARP: 12
+component_params:
+  CERG_A:
+    cop: 4
+  CERG_B:
+    cop: 5
+  CHP_A:
+    eta_q: 0.5
+    eta_w: 0.22
+  CHP_B:
+    eta_q: 0.55
+    eta_w: 0.25
+  Cooling_Storage:
+    eta_c: 0.95
+    eta_d: 0.95
+  Elec_Boiler:
+    eta: 0.9
+  Elec_Storage:
+    eta_c: 0.92
+    eta_d: 0.92
+  Gas_Boiler:
+    eta: 0.95
+  Heat_Pump_A:
+    cop: 5
+  Heat_Pump_B:
+    cop: 6
+  Heat_Storage:
+    eta_c: 0.95
+    eta_d: 0.95
+  ICE:
+    eta_q: 0.5
+    eta_w: 0.35
+  WARP:
+    cop: 0.8
+cost_parameters:
+  shed_cost_per_mwh:
+    cool: 20000
+    elec: 20000
+    heat: 20000
+economic_parameters:
+  gas_price_multiplier: 0.6
+  interest_rate: 0.04
+investment_costs:
+  CERG_A: 40
+  CERG_B: 60
+  CHP_A: 85.0
+  CHP_B: 79.0
+  Cooling_Storage: 9
+  Elec_Boiler: 60
+  Elec_Storage: 400
+  Gas_Boiler: 4.0
+  Heat_Pump_A: 380
+  Heat_Pump_B: 350
+  Heat_Storage: 9
+  ICE: 44.0
+  WARP: 60
+lifetimes:
+  CERG_A: 10
+  CERG_B: 20
+  CHP_A: 30
+  CHP_B: 30
+  Cooling_Storage: 20
+  Elec_Boiler: 20
+  Elec_Storage: 10
+  Gas_Boiler: 30
+  Heat_Pump_A: 20
+  Heat_Pump_B: 20
+  Heat_Storage: 20
+  ICE: 30
+  WARP: 20
+simulation_control:
+  num_days: 8

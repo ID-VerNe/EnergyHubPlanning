@@ -1,0 +1,75 @@
+# Scenario for Question 1: Medium load shedding cost.
+# CORRECTED PARAMETERS from Jupyter Notebook
+
+simulation_control:
+  num_days: 8
+
+economic_parameters:
+  interest_rate: 0.04
+  gas_price_multiplier: 1.0
+
+cost_parameters:
+  shed_cost_per_mwh:
+    elec: 2000
+    heat: 2000
+    cool: 2000
+
+investment_costs:
+  CHP_A: 850
+  CHP_B: 790
+  ICE: 440
+  Gas_Boiler: 40
+  Elec_Boiler: 60
+  Heat_Pump_A: 380
+  Heat_Pump_B: 350
+  CERG_A: 40
+  CERG_B: 60
+  WARP: 60
+  Elec_Storage: 400
+  Heat_Storage: 9
+  Cooling_Storage: 9
+
+lifetimes:
+  CHP_A: 30
+  CHP_B: 30
+  ICE: 30
+  Gas_Boiler: 30
+  Elec_Boiler: 20
+  Heat_Pump_A: 20
+  Heat_Pump_B: 20
+  CERG_A: 10
+  CERG_B: 20
+  WARP: 20
+  Elec_Storage: 10
+  Heat_Storage: 20
+  Cooling_Storage: 20
+
+base_capacities:
+  CHP_A: 2
+  CHP_B: 8
+  ICE: 8
+  Gas_Boiler: 2
+  Elec_Boiler: 2
+  Heat_Pump_A: 2
+  Heat_Pump_B: 10
+  CERG_A: 0.5
+  CERG_B: 12
+  WARP: 12
+  Elec_Storage: {power: 1, capacity: 2}
+  Heat_Storage: {power: 8, capacity: 40}
+  Cooling_Storage: {power: 8, capacity: 40}
+
+component_params:
+  CHP_A: {eta_w: 0.22, eta_q: 0.5}
+  CHP_B: {eta_w: 0.25, eta_q: 0.55}
+  ICE: {eta_w: 0.35, eta_q: 0.5}
+  Gas_Boiler: {eta: 0.95}
+  Elec_Boiler: {eta: 0.9}
+  Heat_Pump_A: {cop: 5}
+  Heat_Pump_B: {cop: 6}
+  CERG_A: {cop: 4}
+  CERG_B: {cop: 5}
+  WARP: {cop: 0.8}
+  Elec_Storage: {eta_c: 0.92, eta_d: 0.92}
+  Heat_Storage: {eta_c: 0.95, eta_d: 0.95}
+  Cooling_Storage: {eta_c: 0.95, eta_d: 0.95}
